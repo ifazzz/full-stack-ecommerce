@@ -7,7 +7,6 @@ import { IoBagOutline } from "react-icons/io5";
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
 
-
 const Header = () => {
     return (
         <>
@@ -47,7 +46,6 @@ const Header = () => {
 
                 <Navigation/>
 
-               
             </div>
         </>
     )

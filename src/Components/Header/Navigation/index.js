@@ -7,9 +7,10 @@ const Navigation = () => {
         <nav>
             <div className='container'>
                 <div className='col-sm-3 navPart1'>
-                    <Button className='allCatTab'>
+                    <Button className='allCatTab align-items-center'>
                         <span><IoIosMenu/></span>
                         <span class="text">ALL CATEGORIES</span>
+                        <span><FaAngleDown/></span>
                     </Button>
                 </div>
 
