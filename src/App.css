@@ -8,6 +8,12 @@ body{
 
 .bg-blue{background: #3e49ec;}
 
+@media (max-width: 1300px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1200px;
+  }
+}
+
 .headerWrapper .top-strip{padding: 8px 0px;}
 .headerWrapper .top-strip p{
   color: #fff; 
@@ -17,7 +23,7 @@ body{
 .headerWrapper .header{
   width: 100%;
   height: auto;
-  padding: 15px 0px;
+  padding: 25px 0px;
 }
 .logoWrapper img{
   width: 100%;
@@ -122,4 +128,20 @@ header .part3 .circle svg{
   display: flex;
   width: 20px;
   height: 20px;
+}
+nav .allCatTab{
+  background: #2bbef9;
+  padding: 8px 30px !important;
+  border-radius: 30px !important;
+}
+nav .allCatTab *{
+  color: #fff;
+}
+nav .allCatTab:hover{
+  background: #2bbef9;
+}
+nav .allCatTab .text{
+  /* font-size: 14px; */
+  font-weight: 600;
+  /* text-transform: capitalize; */
 }

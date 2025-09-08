@@ -5,6 +5,7 @@ import CountryDropdown from '../CountryDropdown';
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import SearchBox from './SearchBox';
+import Navigation from './Navigation';
 
 
 const Header = () => {
@@ -43,6 +44,10 @@ const Header = () => {
                         </div>
                     </div>
                 </header>
+
+                <Navigation/>
+
+               
             </div>
         </>
     )
