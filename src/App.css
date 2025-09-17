@@ -131,7 +131,7 @@ header .part3 .circle svg{
 }
 nav .allCatTab{
   background: #2bbef9;
-  padding: 8px 30px !important;
+  padding: 10px 15px !important;
   border-radius: 30px !important;
 }
 nav .allCatTab *{
@@ -145,3 +145,10 @@ nav .allCatTab .text{
   font-weight: 600;
   /* text-transform: capitalize; */
 }
+
+nav .allCatTab svg{
+  font-size: 25px !important;
+}
+
+nav .allCatTab .icon1 svg{font-size: 20px !important;}
+nav .allCatTab .icon2 svg{font-size: 15px !important;}
