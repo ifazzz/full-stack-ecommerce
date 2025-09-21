@@ -61,7 +61,7 @@ const Home = () => {
                                             </div>
 
                                             <h4>Werther's Original Caramel HHard Candies</h4>
-                                            <span className="text-succes">In Stock</span>
+                                            <span className="text-success d-block">In Stock</span>
                                             <Rating name="read-only" value={5} readOnly />
                                         </div>
                                     </SwiperSlide>
