@@ -7,63 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import Rating from "@mui/material/Rating";
+
+import ProductItem from "../../Components/ProductItem";
 
 const Home = () => {
-  const slideArray = [
-    {
-      id: 1,
-      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
-      title: "Werther's Original Caramel Hard Candies",
-      oldPrice: "$20.00",
-      netPrice: "$14.00",
-      rating: 5,
-      stock: "In Stock",
-      badge: "28%",
-    },
-    {
-      id: 2,
-      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
-      title: "Ifaz",
-      oldPrice: "$20.00",
-      netPrice: "$14.00",
-      rating: 5,
-      stock: "In Stock",
-      badge: "28%",
-    },
-    {
-      id: 3,
-      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
-      title: "Seiam",
-      oldPrice: "$20.00",
-      netPrice: "$14.00",
-      rating: 5,
-      stock: "In Stock",
-      badge: "28%",
-    },
-    {
-      id: 3,
-      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
-      title: "Seiam",
-      oldPrice: "$20.00",
-      netPrice: "$14.00",
-      rating: 5,
-      stock: "In Stock",
-      badge: "28%",
-    },
-    {
-      id: 3,
-      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
-      title: "Seiam",
-      oldPrice: "$20.00",
-      netPrice: "$14.00",
-      rating: 5,
-      stock: "In Stock",
-      badge: "28%",
-    },
-  ];
-
-  
   var productSliderOptions = {
     dots: true,
     infinite: false,
@@ -109,42 +56,33 @@ const Home = () => {
                   modules={[Navigation]}
                   className="mySwiper"
                 >
-                  {slideArray.length > 0 &&
-                    slideArray.map((slide) => (
-                      <SwiperSlide key={slide.id}>
-                        <div className="item productItem">
-                          <div className="imgWrapper">
-                            <img src={slide.img} className="w-100" />
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
 
-                            <span className="badge badge-primary">
-                              {slide.badge}
-                            </span>
-                          </div>
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
 
-                          <div className="info">
-                            <h4>{slide.title}</h4>
-                            <span className="text-success d-block">
-                              {slide.stock}
-                            </span>
-                            <Rating
-                              className="mt-2 mb-2"
-                              name="read-only"
-                              value={slide.rating}
-                              readOnly
-                              size="small"
-                              precision={0.5}
-                            />
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
 
-                            <div className="d-flex">
-                              <span className="oldPrice">{slide.oldPrice}</span>
-                              <span className="netPrice text-danger">
-                                {slide.netPrice}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    ))}
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <ProductItem />
+                  </SwiperSlide>
                 </Swiper>
               </div>
             </div>
