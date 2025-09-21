@@ -41,6 +41,26 @@ const Home = () => {
       stock: "In Stock",
       badge: "28%",
     },
+    {
+      id: 3,
+      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
+      title: "Seiam",
+      oldPrice: "$20.00",
+      netPrice: "$14.00",
+      rating: 5,
+      stock: "In Stock",
+      badge: "28%",
+    },
+    {
+      id: 3,
+      img: "https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg",
+      title: "Seiam",
+      oldPrice: "$20.00",
+      netPrice: "$14.00",
+      rating: 5,
+      stock: "In Stock",
+      badge: "28%",
+    },
   ];
 
   
