@@ -417,7 +417,7 @@ nav .navPart2 ul li:hover .submenu{
 }
 
 .productRow .hd{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -536,4 +536,16 @@ border-right: 1px solid transparent !important;
 
 .badge-primary{
   background: #2bbef9 !important;
+}
+
+.homeCat{
+  padding: 35px 0px;
+}
+.homeCat .swiper .item{
+  padding: 15px;
+  width: 100%;
+  height: auto;
+}
+.homeCat .swiper .item img{
+  width: 80%;
 }
