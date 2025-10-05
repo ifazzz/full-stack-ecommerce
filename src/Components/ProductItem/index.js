@@ -2,46 +2,63 @@ import Rating from "@mui/material/Rating";
 import { TfiFullscreen } from "react-icons/tfi";
 import Button from "@mui/material/Button";
 import { IoMdHeartEmpty } from "react-icons/io";
-
+import { useContext, useState } from "react";
+import { MyContext } from "../../App";
 
 const ProductItem = () => {
-    return (
-        <div className="item productItem">
-                          <div className="imgWrapper">
-                            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg" className="w-100" />
+  const context = useContext(MyContext);
 
-                            <span className="badge badge-primary">28%</span>
+  const viewProductDetails = (id) => {
+    context.setisOpenProductModal(true);
+  };
 
-                            <div className="actions">
-                                <Button><TfiFullscreen/></Button>
-                                <Button><IoMdHeartEmpty style={{fontSize:'20px'}}/></Button>
-                            </div>
+  // const closeProductModal = () => {
+  //   context.setisOpenProductModal(false);
+  // };
 
-                          </div>
+  return (
+    <>
+      <div className="item productItem">
+        <div className="imgWrapper">
+          <img
+            src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"
+            className="w-100"
+          />
 
-                          <div className="info">
-                            <h4>Werther's Original Caramel Hard Candies</h4>
-                            <span className="text-success d-block">
-                              In Stock
-                            </span>
-                            <Rating
-                              className="mt-2 mb-2"
-                              name="read-only"
-                              value={5}
-                              readOnly
-                              size="small"
-                              precision={0.5}
-                            />
+          <span className="badge badge-primary">28%</span>
 
-                            <div className="d-flex">
-                              <span className="oldPrice">$20.00</span>
-                              <span className="netPrice text-danger">
-                                $14.00
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-    )
-}
+          <div className="actions">
+            <Button onClick={() => viewProductDetails(1)}>
+              <TfiFullscreen />
+            </Button>
+            <Button>
+              <IoMdHeartEmpty style={{ fontSize: "20px" }} />
+            </Button>
+          </div>
+        </div>
+
+        <div className="info">
+          <h4>Werther's Original Caramel Hard Candies</h4>
+          <span className="text-success d-block">In Stock</span>
+          <Rating
+            className="mt-2 mb-2"
+            name="read-only"
+            value={5}
+            readOnly
+            size="small"
+            precision={0.5}
+          />
+
+          <div className="d-flex">
+            <span className="oldPrice me-2">$20.00</span>
+            <span className="netPrice text-danger">$14.00</span>
+          </div>
+        </div>
+      </div>
+
+      {/* <ProductModal /> */}
+    </>
+  );
+};
 
 export default ProductItem;
