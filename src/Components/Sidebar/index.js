@@ -1,8 +1,14 @@
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [value, setValue] = useState([100, 60000]);
+  const [value2, setValue2] = useState(0);
   return (
     <>
       <div className="sidebar">
@@ -11,28 +17,60 @@ const Sidebar = () => {
           <div className="scroll">
             <ul>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Men" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Men"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Women" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Women"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Beauty" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Beauty"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Kids" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Kids"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Cameras" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Cameras"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Men Bags" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Men Bags"
+                />
               </li>{" "}
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Women Bags" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Women Bags"
+                />
               </li>
               <li>
-                <FormControlLabel className="w-100" control={<Checkbox />} label="Men Footwear" />
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Men Footwear"
+                />
               </li>
               <li>
                 <FormControlLabel
@@ -43,6 +81,101 @@ const Sidebar = () => {
             </ul>
           </div>
         </div>
+
+        <div className="filterBox">
+          <h6>FILTER BY PRICE</h6>
+
+          <RangeSlider
+            value={value}
+            onInput={setValue}
+            min={100}
+            max={60000}
+            step={5}
+          />
+
+          <div className="d-flex pt-2 pb-2 priceRange">
+            <span>
+              From: <strong className="text-dark">Tk: {value[0]}</strong>
+            </span>
+            <span className="ms-auto">
+              From: <strong className="text-dark">Tk: {value[1]}</strong>
+            </span>
+          </div>
+        </div>
+
+        <div className="filterBox">
+          <h6>PRODUCT STATUS</h6>
+          <div className="scroll">
+            <ul>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="In Stock"
+                />
+              </li>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="On Sale"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="filterBox">
+          <h6>BRANDS</h6>
+          <div className="scroll">
+            <ul>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Frito Lay"
+                />
+              </li>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Nespresso"
+                />
+              </li>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Oreo"
+                />
+              </li>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Quaker"
+                />
+              </li>
+              <li>
+                <FormControlLabel
+                  className="w-100"
+                  control={<Checkbox />}
+                  label="Weich's"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <Link to="#">
+          <img
+            src="https://api.spicezgold.com/download/file_1734525757507_NewProject(34).jpg"
+            className="w-100"
+          />
+        </Link>
       </div>
     </>
   );
