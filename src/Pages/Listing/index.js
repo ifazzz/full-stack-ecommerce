@@ -9,7 +9,7 @@ const Listing = () => {
             <Sidebar/>
 
             <div className="content_right">
-                content_right
+                <img src="https://api.spicezgold.com/download/file_1734524971122_NewProject(8).jpg" className="w-100"/>
             </div>
           </div>
         </div>
