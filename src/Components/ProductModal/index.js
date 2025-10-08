@@ -14,31 +14,13 @@ import { Navigation } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 
 const ProductModal = (props) => {
+
   const [slideIndex, setSlideIndex] = useState(0);
   const zoomSliderBig = useRef();
   const zoomSlider = useRef();
 
   const context = useContext(MyContext);
 
-  // var settings = {
-  //   dots: false,
-  //   infinite: false,
-  //   speed: 500,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   fade: false,
-  //   arrows: true,
-  // };
-
-  // var settings2 = {
-  //   dots: false,
-  //   infinite: false,
-  //   speed: 700,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   fade: false,
-  //   arrows: false,
-  // };
 
   const goto = (index) => {
     setSlideIndex(index);
@@ -81,12 +63,12 @@ const ProductModal = (props) => {
 
         <hr />
 
-        <div className="row mt-2 productDetaieModal">
+        <div className="row mt-2 productDetaileModal">
           <div className="col-md-5">
             <div className="productZoom position-relative">
               <div className="badge badge-primary">23%</div>
               <Swiper
-                slidesPerViwe={1}
+                slidesPerView={1}
                 spaceBetween={0}
                 navigation={false}
                 slidesPerGroup={1}
@@ -117,7 +99,7 @@ const ProductModal = (props) => {
             </div>
 
             <Swiper
-              slidesPerViwe={4}
+              slidesPerView={4}
               spaceBetween={0}
               navigation={true}
               slidesPerGroup={1}
