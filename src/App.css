@@ -1019,3 +1019,13 @@ footer .copyright ul li a:hover svg{
 .section{
   padding: 45px 0px;
 }
+.productDetails .hd{
+  font-size: 26px;
+}
+
+.productDetails .oldPrice{
+  font-size: 20px;
+}
+.productDetails .netPrice{
+  font-size: 22px;
+}
