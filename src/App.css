@@ -1015,3 +1015,7 @@ footer .copyright ul li a:hover svg{
 .productListing .productItem.one .img_rapper{
   width: 25%;
 }
+
+.section{
+  padding: 45px 0px;
+}

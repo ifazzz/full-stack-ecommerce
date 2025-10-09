@@ -2,31 +2,17 @@ import Dialog from "@mui/material/Dialog";
 import { MdClose } from "react-icons/md";
 import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
-import Slider from "react-slick";
-import { useContext, useRef, useState } from "react";
-import InnerImageZoom from "react-inner-image-zoom";
-import "react-inner-image-zoom/lib/styles.min.css";
+import { useContext } from "react";
 import QuantityBox from "../QuantityBox";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
-import { Navigation } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
+import ProductZoom from "../ProductZoom";
+
 
 const ProductModal = (props) => {
 
-  const [slideIndex, setSlideIndex] = useState(0);
-  const zoomSliderBig = useRef();
-  const zoomSlider = useRef();
-
   const context = useContext(MyContext);
-
-
-  const goto = (index) => {
-    setSlideIndex(index);
-    zoomSlider.current.swiper.slideTo(index);
-    zoomSliderBig.current.swiper.slideTo(index);
-  };
 
   return (
     <>
@@ -65,68 +51,9 @@ const ProductModal = (props) => {
 
         <div className="row mt-2 productDetaileModal">
           <div className="col-md-5">
-            <div className="productZoom position-relative">
-              <div className="badge badge-primary">23%</div>
-              <Swiper
-                slidesPerView={1}
-                spaceBetween={0}
-                navigation={false}
-                slidesPerGroup={1}
-                modules={[Navigation]}
-                className="zoomSliderBig"
-                ref={zoomSliderBig}
-              >
-                <SwiperSlide>
-                  <div className="item">
-                    <InnerImageZoom
-                      zoomType="hover"
-                      zoomScale={1}
-                      src={`https://api.spicezgold.com/download/file_1734526959744_good-life-kachi-ghani-mustard-oil-1-l-pouch-product-images-o491334852-p491334852-0-202204281552.webp`}
-                    />
-                  </div>
-                </SwiperSlide>
 
-                <SwiperSlide>
-                  <div className="item">
-                    <InnerImageZoom
-                      zoomType="hover"
-                      zoomScale={1}
-                      src={`https://api.spicezgold.com/download/file_1734526959745_good-life-kachi-ghani-mustard-oil-1-l-pouch-product-images-o491334852-p491334852-1-202204281552.webp`}
-                    />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            <ProductZoom/>
 
-            <Swiper
-              slidesPerView={4}
-              spaceBetween={0}
-              navigation={true}
-              slidesPerGroup={1}
-              modules={[Navigation]}
-              className="zoomSlider"
-              ref={zoomSlider}
-            >
-              <SwiperSlide>
-                <div className={`item ${slideIndex===0 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734526959744_good-life-kachi-ghani-mustard-oil-1-l-pouch-product-images-o491334852-p491334852-0-202204281552.webp`}
-                    className="w-100"
-                    onClick={() => goto(0)}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={`item ${slideIndex===1 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734526959745_good-life-kachi-ghani-mustard-oil-1-l-pouch-product-images-o491334852-p491334852-1-202204281552.webp`}
-                    className="w-100"
-                    onClick={() => goto(1)}
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
           </div>
 
           <div className="col-md-7">
