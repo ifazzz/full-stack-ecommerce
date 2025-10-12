@@ -15,7 +15,7 @@ body{
 
 @media (max-width: 1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl{
-      max-width: 1200px;
+      max-width: 1280px;
   }
 }
 
@@ -23,11 +23,18 @@ body{
 .badge{
   display: inline-block;
   padding: 7px 10px;
+  border-radius: 20px;
 }
-.badge.bg-success{
+.badge.bg-success{ 
   background: #e5f8ed !important;
-  color: #16b858;
+  color: #16b858 !important;
 }
+.badge-success{
+  color: #00b853;
+  background: #e5f8ed !important;
+}
+
+
 
 button{
   text-transform: capitalize !important;
@@ -41,6 +48,7 @@ button{
 .btn-big{
   font-size: 15px !important;
   padding: 7px 30px !important;
+  min-width: auto !important;
 }
 .btn-round{
   border-radius: 30px !important;
@@ -1028,4 +1036,31 @@ footer .copyright ul li a:hover svg{
 }
 .productDetails .netPrice{
   font-size: 22px;
+}
+
+
+.productSize{
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+.productSize ul li{
+  margin-right: 10px !important;
+}
+.productSize ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px !important;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 16px !important;
+  transition: all 0.1s ease-in-out;
+}
+.productSize ul li a.active{
+  background: #3bb77e !important;
+  color: #fff !important;
 }
