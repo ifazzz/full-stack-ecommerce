@@ -178,13 +178,11 @@ const Home = () => {
                 </Button>
               </div>
 
-              <div className="product_row w-100 mt-4">
+              <div className="product_row w-100 mt-2">
                 <Swiper
                   slidesPerView={4}
                   spaceBetween={0}
-                  pagination={{
-                    clickable: true,
-                  }}
+                  navigation={true}
                   modules={[Navigation]}
                   className="mySwiper"
                 >
@@ -218,7 +216,7 @@ const Home = () => {
                 </Swiper>
               </div>
 
-              <div className="d-flex align-item-center mt-5">
+              <div className="d-flex align-items-center mt-4">
                 <div className="info w-75">
                   <h3 className="mb-0 hd">NEW PRODUCTS</h3>
                   <p className="text-light text-sml mb-0">

@@ -1032,7 +1032,7 @@ footer .copyright ul li a:hover svg{
 .section{
   padding: 45px 0px;
 }
-.productDetails .hd{
+.productDetails h2.hd{
   font-size: 26px;
 }
 
@@ -1088,3 +1088,89 @@ footer .copyright ul li a:hover svg{
   color: #000 !important;
   opacity: 0.8;
 }
+
+.detailsPageTabs{
+  border-radius: 25px !important;
+  background: #fafafa;
+}
+  .customTabs ul li{
+    margin-right: 30px !important;
+  }
+  .customTabs ul li button{
+    padding: 10px 25px !important;
+    border: 1px solid rgba(0,0,0,0.2) !important;
+    font-size: 20px !important;
+    text-transform: capitalize !important;
+    border-radius: 30px !important;
+    color: #000 !important;
+  }
+
+  .customTabs ul li button.active{
+    background: #233a95;
+    color: #fff !important;
+  }
+
+  .reviewsCard{
+    margin-bottom: 25px !important;
+  }
+
+  .reviewsCard .image{
+    width: 100px;
+  }
+  .reviewsCard .rounded-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+  }
+  .reviewsCard .rounded-circle .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .reviewsCard .info{
+    width: 85%;
+  }
+
+  .detailsPageTabs .table th, .detailsPageTabs .tabletd{
+    vertical-align: middle;
+    font-size: 14px;
+  }
+
+  .detailsPageTabs .table td p{
+    margin-bottom: 0px;
+  }
+
+  .reviewForm h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .reviewForm .form-group{
+    margin-bottom: 25px;
+  }
+  .reviewForm .form-group .from-control{
+    height: 50px;
+    font-size: 16px;
+    border-radius: 7px !important;
+    padding-left: 20px;
+  }
+  .reviewForm .form-group textarea.from-control{
+    height: 200px;
+    padding-top: 25px;
+  }
+
+  .progressBarBox{
+    margin-bottom: 10px;
+  }
+  .progress-bar{
+    font-size: 16px;
+  }
+
+  .reviewsCard .info p{
+    font-size: 13px;
+    line-height: 22px;
+  }
+
