@@ -502,6 +502,10 @@ nav .navPart2 ul li:hover .submenu{
   cursor: pointer;
   position: relative;
 }
+.productItem:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border: 1px solid transparent !important;
+}
 
 .productItem .badge{
   display: inline-block;
@@ -524,19 +528,19 @@ nav .navPart2 ul li:hover .submenu{
 }
 
 .info .oldPrice{
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
-  color: rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.4);
   text-decoration: line-through;
 }
-.info .oldPrice lg{
+.info .oldPrice.lg{
   font-size: 20px;
 }
 .info .netPrice{
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
 }
-.info .netPrice lg{
+.info .netPrice.lg{
   font-size: 20px;
 }
 
@@ -595,6 +599,9 @@ nav .navPart2 ul li:hover .submenu{
 .product_row{
   margin-left: -10px;
   margin-right: -10px;
+}
+.product_row .swiper{
+  padding-right: 80px !important;
 }
 .product_row .productItem{
 border-right: 1px solid transparent !important;
@@ -1035,6 +1042,9 @@ footer .copyright ul li a:hover svg{
 .productDetails h2.hd{
   font-size: 26px;
 }
+.productDetails h3.hd{
+  font-size: 18px !important;
+}
 
 .productDetails .oldPrice{
   font-size: 20px;
@@ -1174,3 +1184,15 @@ footer .copyright ul li a:hover svg{
     line-height: 22px;
   }
 
+.cartPage .table thead{
+  background: #ececec !important;
+  overflow: hidden;
+}
+.cartPage .table thead th:first-child{
+  border-top-left-radius: 15px !important;
+  border-bottom-left-radius: 15px !important
+}
+.cartPage .table thead th:first-child{
+  border-top-right-radius: 15px !important;
+  border-bottom-right-radius: 15px !important
+}

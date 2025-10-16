@@ -360,8 +360,10 @@ const ProductDetails = () => {
 
           <br />
 
-          <RelatedProducts/>
-          
+          <RelatedProducts title="RELATED PRODUCT"/>
+
+          <RelatedProducts title="RECENTLY VIEWED PRODUCTS"/>
+
         </div>
       </section>
     </>

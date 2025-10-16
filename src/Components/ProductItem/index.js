@@ -17,7 +17,7 @@ const ProductItem = (props) => {
   return (
     <>
       <div className={`productItem ${props.itemView}`}>
-        <div className="imgWrapper">
+        <div className="img_rapper">
           <img
             src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-3-346x310.jpg"
             className="w-100"

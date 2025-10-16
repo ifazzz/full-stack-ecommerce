@@ -183,6 +183,7 @@ const Home = () => {
                   slidesPerView={4}
                   spaceBetween={0}
                   navigation={true}
+                  slidesPerGroup={3}
                   modules={[Navigation]}
                   className="mySwiper"
                 >
